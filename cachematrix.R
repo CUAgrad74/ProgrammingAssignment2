@@ -2,15 +2,15 @@
 
 ## R_Programming class
 ## ProgrammingAssignment2 for week 3
-## 20-Feb-2015
+## 21-Feb-2015
 ## CUAgrad74
 
 ## There are two main functions in the program: makeCacheMatrix and cacheSolve.
 ## The purpose of the functions is to return the inverse of a passed matrix argument.
 
-## The inverse of the matrix is computed if it has not been computed previously
-## and it is then cached into another matrix object.
-## If the inverse has been computed previously, it is retreived from the cache
+## The inverse of the passed matrix is computed if it has not been computed 
+## previously and it is then cached into another matrix object.
+## If the inverse has been computed previously, it is retrieved from the cache
 ## instead of being computed again.
 
 
@@ -18,7 +18,7 @@
 ## the list cacheMatrix: origmtrx contains the originally passed matrix
 ## and invrtmtrx contains its inverse. invrtmtrx is initially set to NULL.
 ## A logical incache reflects whether the inverse of the argument matrix is
-## currently cached in invrtmrtx.  The list cacheMatrix is returned.
+## currently cached in invrtmtrx.  The list cacheMatrix is returned.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -35,14 +35,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## The cacheSolve function returns a matrix that is the inverse of the matrix
-## argument passed in the function call. If the inverse of that matrix has already
+## argument passed in the function call. If the inverse of THAT matrix has already
 ## been computed and is in cache, the cached matrix is returned.  If the inverse
 ## of the matrix is not already in cache, it is computed and assigned to cacheMatrix$inverse.
 ## The logical incache is set to TRUE. cacheMatrix$inverse is returned.
 
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
 
   if (!identical(cacheMatrix$original, x)) {  ## These are different matrices, can't use cache
     
